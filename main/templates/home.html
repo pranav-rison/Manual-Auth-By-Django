@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Authentication App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        a {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-login {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        .btn-login:hover {
+            background-color: #5568d3;
+            transform: translateY(-2px);
+        }
+        
+        .btn-register {
+            background-color: #764ba2;
+            color: white;
+        }
+        
+        .btn-register:hover {
+            background-color: #5a3a7d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>This is your authentication application. Please login or register to continue.</p>
+        <div class="button-group">
+            <a href="{% url 'login' %}" class="btn-login">Login</a>
+            <a href="{% url 'register' %}" class="btn-register">Register</a>
+        </div>
+    </div>
+</body>
+</html>
